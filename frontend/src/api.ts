@@ -1,0 +1,7 @@
+const BASE=import.meta.env.VITE_API_URL||'http://localhost:4000/api';
+export function getToken(){return localStorage.getItem('lexdesk_token')||''}
+export function setToken(t:string){localStorage.setItem('lexdesk_token',t)}
+export function clearToken(){localStorage.removeItem('lexdesk_token')}
+export async function api<T=any>(path:string, options:RequestInit={}):Promise<T>{const headers=new Headers(options.headers);if(!(options.body instanceof FormData))headers.set('Content-Type','application/json');const token=getToken();if(token)headers.set('Authorization',`Bearer ${token}`);const response=await fetch(`${BASE}${path}`,{...options,headers});if(!response.ok){const data=await response.json().catch(()=>({error:'Request failed'}));if(response.status===401&&path!=='/auth/login'&&path!=='/auth/register'){clearToken();window.dispatchEvent(new Event('lexdesk-logout'))}throw new Error(data.error||`Request failed (${response.status})`)}if(response.headers.get('content-type')?.includes('text/csv'))return await response.text() as T;return response.status===204?undefined as T:response.json()}
+export function money(value:any){return new Intl.NumberFormat('en-PK',{style:'currency',currency:'PKR',maximumFractionDigits:0}).format(Number(value||0))}
+export function date(value?:string){if(!value)return '—';return new Intl.DateTimeFormat('en-PK',{dateStyle:'medium',timeZone:'Asia/Karachi'}).format(new Date(value))}

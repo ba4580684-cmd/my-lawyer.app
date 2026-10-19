@@ -1,0 +1,16 @@
+// Reference directories: https://www.pbs.gov.pk/gis/ and https://www.ljcp.gov.pk/
+// Suggestions remain editable to accommodate renamed districts and individual courts.
+export const districts = Array.from(new Set([
+  'Attock', 'Bahawalnagar', 'Bahawalpur', 'Bhakkar', 'Chakwal', 'Chiniot', 'Dera Ghazi Khan', 'Faisalabad', 'Gujranwala', 'Gujrat', 'Hafizabad', 'Jhang', 'Jhelum', 'Kasur', 'Khanewal', 'Khushab', 'Lahore', 'Layyah', 'Lodhran', 'Mandi Bahauddin', 'Mianwali', 'Multan', 'Muzaffargarh', 'Nankana Sahib', 'Narowal', 'Okara', 'Pakpattan', 'Rahim Yar Khan', 'Rajanpur', 'Rawalpindi', 'Sahiwal', 'Sargodha', 'Sheikhupura', 'Sialkot', 'Toba Tek Singh', 'Vehari', 'Murree', 'Talagang', 'Wazirabad', 'Kot Addu',
+  'Badin', 'Dadu', 'Ghotki', 'Hyderabad', 'Jacobabad', 'Jamshoro', 'Karachi Central', 'Karachi East', 'Karachi South', 'Karachi West', 'Korangi', 'Malir', 'Keamari', 'Kashmore', 'Khairpur', 'Larkana', 'Matiari', 'Mirpur Khas', 'Naushahro Feroze', 'Shaheed Benazirabad', 'Qambar Shahdadkot', 'Sanghar', 'Shikarpur', 'Sujawal', 'Sukkur', 'Tando Allahyar', 'Tando Muhammad Khan', 'Tharparkar', 'Thatta', 'Umerkot',
+  'Abbottabad', 'Bajaur', 'Bannu', 'Battagram', 'Buner', 'Charsadda', 'Upper Chitral', 'Lower Chitral', 'Dera Ismail Khan', 'Hangu', 'Haripur', 'Karak', 'Khyber', 'Kohat', 'Kolai-Palas', 'Upper Kohistan', 'Lower Kohistan', 'Kurram', 'Lakki Marwat', 'Lower Dir', 'Upper Dir', 'Malakand', 'Mansehra', 'Mardan', 'Mohmand', 'North Waziristan', 'Nowshera', 'Orakzai', 'Peshawar', 'Shangla', 'South Waziristan', 'Swabi', 'Swat', 'Tank', 'Torghar',
+  'Awaran', 'Barkhan', 'Chagai', 'Chaman', 'Dera Bugti', 'Duki', 'Gwadar', 'Harnai', 'Hub', 'Jafarabad', 'Jhal Magsi', 'Kachhi', 'Kalat', 'Kech', 'Kharan', 'Khuzdar', 'Killa Abdullah', 'Killa Saifullah', 'Kohlu', 'Lasbela', 'Loralai', 'Mastung', 'Musakhel', 'Nasirabad', 'Nushki', 'Panjgur', 'Pishin', 'Quetta', 'Sherani', 'Sibi', 'Sohbatpur', 'Surab', 'Washuk', 'Zhob', 'Ziarat',
+  'Islamabad', 'Bagh', 'Bhimber', 'Hattian Bala', 'Haveli', 'Kotli', 'Mirpur', 'Muzaffarabad', 'Neelum', 'Poonch', 'Sudhnoti', 'Astore', 'Diamer', 'Darel', 'Tangir', 'Ghizer', 'Gupis-Yasin', 'Gilgit', 'Ghanche', 'Hunza', 'Kharmang', 'Nagar', 'Rondu', 'Shigar', 'Skardu',
+])).sort();
+
+export const courtNames = [
+  'Supreme Court of Pakistan', 'Federal Shariat Court', 'Islamabad High Court', 'Lahore High Court', 'Sindh High Court', 'Peshawar High Court', 'Balochistan High Court',
+  'Supreme Court of Azad Jammu and Kashmir', 'High Court of Azad Jammu and Kashmir', 'Supreme Appellate Court Gilgit-Baltistan', 'Chief Court Gilgit-Baltistan',
+  'District and Sessions Court', 'Additional District and Sessions Court', 'Civil Court', 'Senior Civil Judge Court', 'Judicial Magistrate Court', 'Family Court', 'Guardian Court', 'Rent Controller Court',
+  'Anti-Terrorism Court', 'Accountability Court', 'Banking Court', 'Consumer Court', 'Labour Court', 'Labour Appellate Tribunal', 'Service Tribunal', 'Federal Service Tribunal', 'Appellate Tribunal Inland Revenue', 'Customs Appellate Tribunal', 'Special Court (Customs, Taxation and Anti-Smuggling)', 'Special Court (Control of Narcotic Substances)', 'Special Court (Offences in Banks)', 'Environmental Protection Tribunal', 'Intellectual Property Tribunal', 'Anti-Corruption Court', 'Juvenile Court',
+];
